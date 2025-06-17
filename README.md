@@ -1,8 +1,8 @@
-# 💥 Life Points Counter - A&C
+# ♻️ Life Points Counter - A&C
 
 Um contador de pontos de vida moderno e responsivo, para o jogo de cartas **Aventuras&Conhecimentos**, criado com HTML, CSS e JavaScript.
 
-![Screenshot](https://user-images.githubusercontent.com/216711949/456031399-60b95184-64da-4e9f-892e-7470aeb81aac.png)
+![Screenshot](https://user-attachments/assets/9b0671b1-80e6-42a5-90ac-5e5d0f2f675c)
 
 🔗 **Acesse o site online aqui:**  
 👉 [https://MiguelAR098.github.io/Life-Points-Counter-A-C/](https://MiguelAR098.github.io/Life-Points-Counter-A-C/)

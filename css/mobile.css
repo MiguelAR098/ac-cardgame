@@ -1,0 +1,37 @@
+.notification.reload-notification {
+    cursor: pointer !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    animation: pulse-light 2s infinite !important;
+    pointer-events: auto !important;
+}
+
+@keyframes pulse-light {
+    0% { box-shadow: 0 0 10px rgba(46, 139, 87, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(46, 139, 87, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(46, 139, 87, 0.5); }
+}
+
+.notification.reload-notification:hover {
+    filter: brightness(1.1) !important;
+}
+
+.notification.reload-notification:active {
+    transform: translateX(-50%) translateY(12px) !important;
+}
+
+/* Remover destaque azul em dispositivos móveis */
+button, 
+input,
+.btn-large, 
+.btn-small, 
+.btn-timer, 
+.tool-btn,
+.settings-btn,
+.fullscreen-btn,
+.close-btn,
+.confirm-btn,
+.notification {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}

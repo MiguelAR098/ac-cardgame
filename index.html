@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventuras & Conhecimentos - Contador de Pontos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fix-mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <header>
+            <div class="fullscreen-btn" id="fullscreenBtn">
+                <i class="fas fa-expand"></i>
+            </div>
+            <h1>Aventuras & Conhecimentos</h1>
+            <div class="main-timer">
+                <div class="timer" id="mainTimer">15:00</div>
+                <div class="timer-controls">
+                    <button class="btn-timer" id="mainTimerToggle"><i class="fas fa-play"></i></button>
+                    <button class="btn-timer" id="mainTimerReset"><i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+            <div class="settings-btn" id="settingsBtn">
+                <i class="fas fa-cog"></i>
+            </div>
+        </header>
+
+        <div class="game-board">
+            <!-- Layout simétrico com jogadores lado a lado -->
+            <div class="player-container">
+                <!-- Jogador 1 (esquerda) -->
+                <div class="player" id="player1">
+                    <div class="player-name" id="player1Name">Duelista 1</div>
+                    <div class="life-counter">
+                        <button class="btn-large" id="player1LifeMinus">-</button>
+                        <div class="life-value-container">
+                            <div class="life-value" id="player1Life">20</div>
+                            <div class="life-bar"></div>
+                        </div>
+                        <button class="btn-large" id="player1LifePlus">+</button>
+                    </div>
+                    <div class="player-stats">
+                        <div class="bioenergia-counter">
+                            <span class="bioenergia-label">Bioenergia:</span>
+                            <span class="bioenergia-value" id="player1Bioenergia">0</span>
+                            <div class="bioenergia-controls">
+                                <button class="btn-small" id="player1BioenergiaPlus">+</button>
+                                <button class="btn-small" id="player1BioenergiaMin">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Área central -->
+                <div class="center-area">
+                    <div class="timer-container">
+                        <div class="timer" id="timer">01:30</div>
+                        <div class="timer-controls">
+                            <button class="btn-timer" id="timerToggle"><i class="fas fa-play"></i></button>
+                            <button class="btn-timer" id="timerReset"><i class="fas fa-redo"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jogador 2 (direita) -->
+                <div class="player" id="player2">
+                    <div class="player-name" id="player2Name">Duelista 2</div>
+                    <div class="life-counter">
+                        <button class="btn-large" id="player2LifeMinus">-</button>
+                        <div class="life-value-container">
+                            <div class="life-value" id="player2Life">20</div>
+                            <div class="life-bar"></div>
+                        </div>
+                        <button class="btn-large" id="player2LifePlus">+</button>
+                    </div>
+                    <div class="player-stats">
+                        <div class="bioenergia-counter">
+                            <span class="bioenergia-label">Bioenergia:</span>
+                            <span class="bioenergia-value" id="player2Bioenergia">0</span>
+                            <div class="bioenergia-controls">
+                                <button class="btn-small" id="player2BioenergiaPlus">+</button>
+                                <button class="btn-small" id="player2BioenergiaMin">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de ferramentas inferior -->
+        <div class="toolbar">
+            <button class="tool-btn" id="resetBtnFooter">Redefinir</button>
+            <button class="tool-btn" id="undoBtnFooter">Desfazer</button>
+        </div>
+
+        <!-- Modal de Configurações -->
+        <div class="modal" id="settingsModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeSettings">&times;</span>
+                <h2>Configurações</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="startingLife">Pontos de Vida Iniciais:</label>
+                        <input type="number" id="startingLife" value="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="gameDuration">Tempo Total de Partida (minutos):</label>
+                        <div class="slider-container">
+                            <input type="range" id="gameDuration" min="10" max="30" value="15" step="1">
+                            <span id="gameDurationValue">15</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="player1NameInput">Nome do Jogador 1:</label>
+                        <input type="text" id="player1NameInput" placeholder="Duelista 1">
+                    </div>
+                    <div class="form-group">
+                        <label for="player2NameInput">Nome do Jogador 2:</label>
+                        <input type="text" id="player2NameInput" placeholder="Duelista 2">
+                    </div>
+                    <div class="settings-buttons">
+                        <button class="btn-apply" id="applySettings">Aplicar</button>
+                        <button class="btn-reset" id="resetGame">Nova Partida</button>
+                        <button class="btn-default" id="defaultSettings">Padrão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts externos -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Utilitários -->
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/utils/notifications.js"></script>
+    <script src="js/utils/performance.js"></script>
+    <script src="js/utils/mobile-fix.js"></script>
+    <script src="js/utils/reload.js"></script>
+    
+    <!-- Núcleo da aplicação -->
+    <script src="js/particles-config.js"></script>
+    <script src="js/core/game.js"></script>
+    <script src="js/core/timers.js"></script>
+    <script src="js/core/ui.js"></script>
+    
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>

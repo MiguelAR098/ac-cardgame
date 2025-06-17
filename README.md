@@ -30,9 +30,9 @@ Um contador de pontos de vida moderno e responsivo, para o jogo de cartas **Aven
 
 ```bash
 # Clone o repositório
-git clone https://github.com/MiguelAR098/Life-Points-Counter-A-C.git
+git clone https://github.com/MiguelAR098/ac-cardgame.git
 
 # Acesse a pasta
-cd Life-Points-Counter-A-C
+cd ac-cardgame
 
 # Abra o index.html no navegador

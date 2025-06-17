@@ -5,7 +5,7 @@ Um contador de pontos de vida moderno e responsivo, para o jogo de cartas **Aven
 ![Screenshot](https://i.ibb.co/HTnp2BPR/screenshot.png)
 
 🔗 **Acesse o site online aqui:**  
-👉 [https://MiguelAR098.github.io/Life-Points-Counter-A-C/](https://MiguelAR098.github.io/Life-Points-Counter-A-C/)
+👉 [https://miguelar098.github.io/ac-cardgame/](https://miguelar098.github.io/ac-cardgame/)
 
 ---
 

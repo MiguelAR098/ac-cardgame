@@ -2,7 +2,7 @@
 
 Um contador de pontos de vida moderno e responsivo, para o jogo de cartas **Aventuras&Conhecimentos**, criado com HTML, CSS e JavaScript.
 
-![Screenshot](./screenshot.png)
+![Screenshot]([./screenshot.png](https://github.com/MiguelAR098/ac-cardgame/issues/1#issue-3153607783))
 
 🔗 **Acesse o site online aqui:**  
 👉 [https://MiguelAR098.github.io/Life-Points-Counter-A-C/](https://MiguelAR098.github.io/Life-Points-Counter-A-C/)
